@@ -116,11 +116,11 @@ class AuthService
             $mail->Host = 'smtp.sendgrid.net';
             $mail->SMTPAuth = true;
             $mail->Username = 'apikey';
-            $mail->Password = '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';
+            $mail->Password = '';
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
 
-            $mail->setFrom('flaviburca@gmail.com', 'Fepa.com');
+            $mail->setFrom('something@gmail.com', 'Fepa.com');
             $mail->addAddress($email);
 
             $mail->isHTML(true);
