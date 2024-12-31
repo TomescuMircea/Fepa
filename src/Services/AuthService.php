@@ -116,7 +116,7 @@ class AuthService
             $mail->Host = 'smtp.sendgrid.net';
             $mail->SMTPAuth = true;
             $mail->Username = 'apikey';
-            $mail->Password = '';
+            // $mail->Password = '';
             $mail->SMTPSecure = 'tls';
             $mail->Port = 587;
 
