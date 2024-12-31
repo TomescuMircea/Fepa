@@ -1,0 +1,17 @@
+{
+    "require": {
+        "firebase/php-jwt": "^6.10",
+      "ext-pdo": "*",
+      "ext-dom": "*",
+      "ext-libxml": "*",
+        "phpmailer/phpmailer": "^6.9",
+      "ext-mysqli": "*",
+        "dompdf/dompdf": "^3.0",
+        "suin/php-rss-writer": "^1.6"
+    },
+    "autoload": {
+      "psr-4": {
+        "Src\\": "src/"
+    }
+  }
+}

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Documentaion</title>
+    <link rel="stylesheet" type="text/css" href="Scholarly.css">
+    <script src="js/scholarly.min.js"></script>
+</head>
+
+<body prefix="schema: http://schema.org">
+
+<header>
+    <h1>Fepa.com</h1>
+</header>
+
+<div class="contentStyle" role="contentinfo">
+    <h2>Cuprins</h2>
+    <ol role="directory">
+        <li><a href="#introduction">Introducere</a>
+            <ul dir="auto">
+                <li> 1.1 <a href="#purpose"> Scop </a></li>
+                <li> 1.2 <a href="#conventions"> Convențiile documentelor </a></li>
+                <li> 1.3 <a href="#audience"> Publicul vizat și sugestii de lectură </a></li>
+                <li> 1.4 <a href="#scope"> Viziunea produsului </a></li>
+            </ul>
+        </li>
+        <li><a href="#descrierea">Descrierea</a>
+            <ul dir="auto">
+                <li> 2.1 <a href="#perspectiva"> Perspectiva produsului </a></li>
+                <li> 2.2 <a href="#functiile"> Funcțiile produsului </a></li>
+                <li> 2.3 <a href="#clasele"> Clasele și caracteristicile utilizatorului </a></li>
+                <li> 2.4 <a href="#mediu"> Mediul de operare </a></li>
+                <li> 2.5 <a href="#constrangeri"> Constrângeri de implementare și design </a></li>
+                <li> 2.6 <a href="#constrangeri"> Documentația utilizatorului </a></li>
+                <li> 2.7 <a href="#ipoteze"> Ipoteze și dependențe </a></li>
+            </ul>
+        </li>
+        <li><a href="#cerinte">Cerințe de interfață externă</a>
+            <ul dir="auto">
+                <li> 3.1 <a href="#interfete"> Interfețe cu utilizatorul </a></li>
+                <li> 3.2 <a href="#interfeteHard"> Interfețe hardware </a></li>
+                <li> 3.3 <a href="#interfeteSoft"> Interfețe software </a></li>
+                <li> 3.4 <a href="#interfeteComm"> Interfețe de comunicații </a></li>
+            </ul>
+        </li>
+        <li><a href="#caracteristici">Caracteristicile sistemului</a>
+            <ul dir="auto">
+                <li> 4.1 <a href="#home"> Home Page </a></li>
+                <li> 4.2 <a href="#report"> Report Page </a></li>
+                <li> 4.3 <a href="#reports"> Reports Page </a></li>
+                <li> 4.4 <a href="#animal"> Animal Page </a></li>
+                <li> 4.5 <a href="#my-reports"> My reports Page </a></li>
+                <li> 4.6 <a href="#statistics"> Statistics page </a></li>
+                <li> 4.7 <a href="#contact"> Contact Page </a></li>
+                <li> 4.8 <a href="#about"> About Page </a></li>
+                <li> 4.9 <a href="#help"> Help Page </a></li>
+                <li> 4.10 <a href="#login"> Login Page </a></li>
+                <li> 4.11 <a href="#signup"> Sign up Page </a></li>
+                <li> 4.12 <a href="#forget"> Forget Password/Username Page </a></li>
+                <li> 4.13 <a href="#admin"> Admin dashboard Page </a></li>
+                <li> 4.14 <a href="#statistics"> Statistics Page </a></li>
+            </ul>
+        </li>
+        <li><a href="#functional">Alte funcționalități</a>
+            <ul dir="auto">
+                <li> 5.1 <a href="#performance"> Cerințe de performanță </a></li>
+                <li> 5.2 <a href="#safety"> Cerințe de sigurață </a></li>
+                <li> 5.3 <a href="#security"> Cerințe de securitate </a></li>
+                <li> 5.4 <a href="#software"> Atribute de calitate software </a></li>
+                <li> 5.5 <a href="#business"> Reguli de afaceri</a></li>
+            </ul>
+        </li>
+    </ol>
+    <dl>
+        <dt>Autori:</dt>
+        <dd>
+            Burcă Flavian, Tomescu Mircea-Andrei
+        </dd>
+        <dt>Discussion Group:</dt>
+        <dd>
+            The <a href="https://github.com/FlavianB/tw-project">Website Project GitHub Group</a>
+        </dd>
+    </dl>
+</div>
+<section id="introduction" role="doc-introduction">
+    <h2>1. Introducere</h2>
+    <section id="purpose" role="doc-purpose">
+        <h3>1.1 Scop</h3>
+        <p>
+            Calitatea vieții și grija față de comunitate sunt două componente esențiale într-o lume civilizată axată
+            asupra nevoilor oamenilor și de aceea noi venim în ajutor cu <b>Fepa</b> - o platformă construită
+            special
+            pentru a raporta întâmplările mai puțin plăcute avute cu prietenii necuvântători cum ar fi: pierderea
+            lor, abandonul, răpirea, abuzul sau orice altă situație critică care pune în pericol atât animalul, cât
+            și comunitatea.
+            De asemenea, site-ul nostru vine în ajutorul companionilor mai puțin norocoși, fără adăpost, care își
+            pot găsi stăpâni cu ajutorul unui mic anunț.
+        </p>
+    </section>
+    <section id="conventions" role="doc-conventions">
+        <h3>1.2 Convențiile documentelor </h3>
+        <p>
+            Acest document nu folosește convenții de nume sau alte conventii tipografice.
+        </p>
+    </section>
+    <section id="audience" role="doc-audience">
+        <h3>1.3 Publicul vizat și sugestii de lectură </h3>
+        <p>
+            Documentul curent se adresează cu precădere cadrelor didactice din învățământul universitar, dar și
+            cititorilor care doresc să își însușească o privire mai aprofundată asupra proiectului nostru, dincolo
+            de o simplă parcurgere a platformei.
+            În cele ce urmează veți avea șansa să descoperiți motivația din spatele proiectului, dar și modalitățile
+            de realizare ale platformei și detaliile legate de implementare.
+        </p>
+    </section>
+    <section id="scope" role="doc-scope">
+        <h3>1.4 Viziunea produsului </h3>
+        <p>
+            Viziunea platformei noastre este aceea de a oferi posibilitatea raportării cât mai facile a animalelor
+            aflate într-o situație critică.
+            Proiectul se dorește a fi unul cu un impact real asupra societății prin oferirea unui spațiu dedicat în
+            care oamenii să poată ajută comunitatea printr-o acțiunea aparent simplă, dar cu o deosebită importanță.
+        </p>
+    </section>
+</section>
+<section id="descrierea" role="doc-descrierea">
+    <h2>2. Descrierea</h2>
+    <section id="perspectiva" role="doc-perspectiva">
+        <h3>2.1 Perspectiva produsului</h3>
+        <p>
+            Platforma de față înglobează funcționalități prezente și pe alte aplicații existente, însă noi am dorit
+            să ne diferențiem prin construirea unui produs ce pune la dispoziție informații cât mai variate. În
+            același timp, platforma rămâne ușor de folosit, cu o interfață intuitivă și facilă.
+            Arhitectura aplicației noastre urmează arhitectura dispatcher-controller-service-repository pentru o
+            separare clară a responsabilităților și pentru a putea fi extinsă ușor.
+        <div class="images__grid__layout">
+            <img class="diagramC4" src="./C4-Context.png" alt="Diagrama aplicatiei">
+            <img class="diagramC4" src="./C4-Container.png" alt="Diagrama aplicatiei">
+            <img class="diagramC4" src="./C4-Container.png" alt="Diagrama aplicatiei">
+            <img class="diagramC4" src="./C4-Code.png" alt="Diagrama aplicatiei">
+        </div>
+        </p>
+    </section>
+    <section id="functiile" role="doc-functiile">
+        <h3>2.2 Funcțiile produsului</h3>
+        <p>
+            Lista de funcționalități ale produsului nostru include raportarea de animale și includerea în
+            raport a informațiilor utile precum
+            locația pe hartă, tipul animalului, descriere, numele și numărul de telefon al celui ce a realizat
+            raportul, dar și
+            fotografii sau tag-uri utile în gestionarea situației.
+            De asemenea, funcțiile platformei noastre mai includ și vizualizarea raporturilor efectuate pentru a le
+            putea șterge în cazul în care se dorește acest lucru, dar și
+            vizualirea tuturor raporturilor create de către utilizatorii platformei și locatia raportărilor pe harta.
+            In plus, platforma noastră oferă și posibilitatea de a vedea statistici privind animalele raportate și
+            de a exporta statisticile in diferite formate: HTML, CSV și PDF.
+        </p>
+    </section>
+    <section id="clasele" role="doc-clasele">
+        <h3>2.3 Clasele și caracteristicile utilizatorului</h3>
+        <p>
+            Utilizatorii platformei se împart în două clase: cei autentificați și cei neautentificați.
+            Prima clasă de utilizatori are toate funcționalitățile oferite de platformă, cum ar fi: raportarea unui
+            animal, administrarea raporturilor, dar și vederea tuturor raporturilor efectuate de ceilalți
+            utilizatori.
+            Cea de a doua clasă de utilizatori are funcționalități mai limitate, putând să vadă statistici legate de
+            raportările făcute,
+            să exporte respectivele statistici, să vadă raporturile făcute de alți utilizatori, dar neputând să facă
+            alte semnalări.
+            În momentul în care un utilizatori neautentificat va dori să creeze un raport privind un animal pierdut
+            sau abandonat acesta va trebui să își facă un cont pentru a i se putea dovedi identitatea, dar și pentru
+            protejarea platformei în cazul unui atac de tip spam.
+        </p>
+    </section>
+    <section id="mediu" role="doc-mediu">
+        <h3>2.4 Mediul de operare</h3>
+        <p>
+            Produsul creat a fost dezvoltat pe platforma Windows și este destinat accesării din browser
+            Datele necesării funcționării sunt ținute într-o bază de date relațională MySQL ce va fi accesată
+            folosind interogări specifice limbajului asociat.
+            Limbajele folosite sunt PHP pentru partea de backend, dar și Javascript pentru diferite
+            servicii/funcționalită,
+            iar pentru partea de frontend am folosit HTML, SCSS compilat în CSS și JavaScript pentru manipularea
+            DOM-ului.
+        </p>
+    </section>
+    <section id="constrangeri" role="doc-constrangeri">
+        <h3>2.5 Constrângeri de implementare și design</h3>
+        <p>
+            Cromatica proiectului nostru este bazată pe o combinație de verde deschis și alb ce au fost alese în
+            urma documentării asupra influențelor culorilor asupra stării de spirit și aspectului vizual.
+            O altă motivație aflată în spatele alegerii culorilor este dorința de a încerca să relaxăm utilizatorul
+            în momente tensionate cum sunt cele de a pierde un companion necuvântător drag sau neliniștea trăită
+            atunci când întâlnești pe stradă un animal de companie abandonat.
+            Backendul platformei noastre este integral bazat pe paradigma REST pentru a putea fi ușor de extins,
+            modificat și înțeles de către orice dezvoltator.
+        </p>
+    </section>
+    <section id="utilizatori" role="doc-utilizatori">
+        <h3>2.6 Documentația utilizatorului</h3>
+        <p>
+            Utilizatorii pe care îi avem în vedere sunt orice persoană care dorește să raporteze animale aflate în
+            pericol sau fără stăpân.
+            De asemenea, utilizatorii beneficiază de o pagină de ajutor pentru a putea înțelege cum funcționează
+            site-ul și pentru a reuși mai ușor să se obișnuiască cu folosirea sa, iar în cazul în care dorințele
+            utilizatorilor nu sunt îndeplinite de platformă aceștia au și posibilitatea de a contacta administratorul
+            platformei printr-un formular.
+        </p>
+    </section>
+    <section id="ipoteze" role="doc-ipoteze">
+        <h3>2.7 Ipoteze și dependențe</h3>
+        <p>
+            Deoarece în timp dorințele utilizatorilor asupra platformei se pot schimba și pot varia există
+            posibilitatea ca produsul nostru să trebuiască modificat pentru a face față noilor cerințe, rezultând
+            astfel modificări neprevăzute inițial în arhitectura aplicației.
+            Dintre dependințele pe care le avem în vedere se numără și cele legate de API-urile folosite pentru:
+            a exporta datele în format PDF (dompdf), a genera hărți (OpenStreetMap), pentru a trimite emailuri
+            (PHPMailer), pentru a crea grafice cu datele agregate (Chart.js), pentru a crea JWT-uri (firebase) și
+            pentru a crea feedul rss (Rss Writer).
+        </p>
+    </section>
+    <section id="securitate" role="doc-securitate">
+        <h3>2.8 Aspecte de siguranță</h3>
+        <p>
+            Aplicația folosește un sistem de autentificare bazat pe JWT pentru a asigura securitatea datelor. Aplicația nu permite
+            utilizatori cu email sau username duplicat, iar parolele sunt stocate în baza de date într-un format criptat (H256). Anumite
+            funcționalități ale aplicației sunt disponibile doar pentru utilizatorii autentificați, iar accesul la anumite resurse este restricționat.
+            Folosind o arhitectura REST, aplicația este mai ușor de securizat, prin restricționări aplicate endpoint-urilor.
+        </p>
+    </section>
+</section>
+<section id="cerinte" role="doc-cerinte">
+    <h2>3. Cerințe de interfață externă</h2>
+    <section id="interfete" role="doc-interfete">
+        <h3>3.1 Interfețe cu utilizatorul</h3>
+        <img class="meniu1" src="./meniu.png" alt="Meniul aplicatiei">
+        <div class="box">
+            <div class="text">
+                Interfața principală conține un meniu poziționat în partea superioară a ecranului cu scopul de a
+                oferi funcționalitățile principale cât mai ușor utilizatorilor.
+
+                Butoanele aflate în acest meniu sunt:
+                <ul class="list31">
+                    <li>Home</li>
+                    <li>Report</li>
+                    <li>Reports</li>
+                    <li>Statistics</li>
+                    <li>Contact</li>
+                    <li>About</li>
+                    <li>Login</li>
+                    <li>Button pentru fluxul RSS</li>
+                </ul>
+                Acest meniu se redimensionează și se strânge atunci când site-ul este accesat de
+                pe un device cu ecran îngust, iar pentru a accesa meniul este necesar apăsarea pe noul text
+                înlocuitor pentru a deschide meniul așezat de data aceasta pe verticală.
+                De asemenea, întreaga platformă abordează un design simplu, cu scris de dimensiuni mari și culori
+                contrastante pentru a fi cât mai ușor de citit.
+            </div>
+        </div>
+        <img class="meniu2" src="./meniu-vertical2.png" alt="Meniul aplicatiei pe vertical">
+    </section>
+    <section id="interfeteHard" role="doc-interfeteHard">
+        <h3>3.2 Interfețe hardware</h3>
+        <p>
+            Platforma a fost concepută pe platforma Windows, însă poate fi accesată de pe orice platformă ce permite
+            vizualizarea conținutului scris în limbaj de marcare hipertext și protocol HTTP, site-ul nostru fiind
+            compatibil atât cu ecranele în format 16:9 sau mai mari, cât și cu formatele de tabletă sau cele de
+            telefon.
+        </p>
+    </section>
+    <section id="interfeteSoft" role="doc-interfeteSoft">
+        <h3>3.3 Interfețe software</h3>
+        <p>
+            Platforma oferă statistici în diferite formate precum HTML, CSV și PDF și, de asemenea, furnizează și
+            rapoartele animalelor înregistrate prin intermediul unui flux de știri RSS. Astfel va fi susținută
+            transmiterea informațiilor utile de pe platformă spre surse externe.
+            Poziția unui animal raportat este de asemenea foarte importantă și acest lucru poate fi înregistrat pe o
+            hartă folosindu-se API-ul open-source OpenStreetMap.
+        </p>
+    </section>
+    <section id="interfeteComm" role="doc-interfeteComm">
+        <h3>3.4 Interfețe de comunicații</h3>
+        <p>
+            În eventualitatea în care un utilizator dorește să ia legătura cu fondatorii platformei, acesta are la
+            dispoziție un formular de contact, iar pentru a putea intra în discuție cu persoana reponsabilă pentru
+            un anumit anunț aceștia pot suna la numărul pe care utilizatorul a fost obligat să îl posteze în
+            secțiunea de contact a raportului.
+        </p>
+    </section>
+</section>
+<section id="caracteristici" role="doc-caracteristici">
+    <h2>4. Caracteristicile sistemului</h2>
+    <section id="home" role="doc-home">
+        <h3>4.1 Home Page </h3>
+        <p>
+            Pagina Home este prima pagină pe care utilizatorul ajunge în momentul în care intră pe platformă. De
+            aici utilizatorul are opțiunea de a alege pe ce pagini dorește să navigheze din meniul orizontal din
+            partea de sus a ecranului.
+        </p>
+    </section>
+    <section id="report" role="doc-report">
+        <h3>4.2 Report Page </h3>
+        <p>
+            Pagina de Report este vizibilă oricărui utilizator, dar poate fi folosită doar utilizatorilor logați unde
+            aceștia vor putea completa formularul cu
+            datele necesare, vor putea încărca poze și, de asemenea, selecta o locație pe hartă pentru a crea un
+            raport complet.
+        </p>
+    </section>
+    <section id="reports" role="doc-reports">
+        <h3>4.3 Reports Page </h3>
+        <p>
+            Pagina Reports este pagina unde orice utilizator, atât autentificat cât și neautentificat, poate vedea
+            toate semnalările active postate de alți utilizatori. Utilizatorul poate da click pe pozele dintr-un
+            anumit anunț și
+            să navigheze pe pagina semnalării specificate, pentru mai multe detalii. De asemenea va avea la
+            dispoziție datele de contact ale persoanei care a efectuat raportul.
+            De asemenea utilizatorii au și posibilitatea de a se uita pe harta așezată în josul paginii pentru a
+            vedea locația în care a fost raportat un anumit animal.
+        </p>
+    </section>
+    <section id="animal" role="doc-animal">
+        <h3>4.4 Animal Page </h3>
+        <p>
+            În pagina proprie creată unui anumit raport, utilizatorii vor putea ajunge dând click pe poza care apare
+            într-un card din pagina de rapoarte. Aici utlizatorii pot vedea atât locația pe hartă, dar și numele,
+            descrierea completă, tag-urile asociate, informațiile de contact ale proprietarului/persoanei ce a
+            postat anunțul și mai multe fotografii pentru a le fi mai ușor să identifice respectivul animal.
+        </p>
+    </section>
+    <section id="my-reports" role="doc-my-reports">
+        <h3>4.5 My Reports Page </h3>
+        <p>
+            Pagina My Reports permite utilizatorului să vadă raporturile active pe care le-a creat și de asemenea
+            să le șteargă în cazul în care acesta, din diverse motive, nu mai dorește ca anunțul să fie vizibil.
+        </p>
+    </section>
+    <section id="statistics" role="doc-statistics">
+        <h3>4.6 Statistics Page </h3>
+        <p>
+            Pagina de statistici oferă posibilitatean utilizatorilor să vadă și să descarce statistici create pe baza
+            datelor
+            agregate și prelucrate de platforma noastră cu scopul de a oferi o privire de ansamblu asupra situației
+            generale a animalelor dintr-o anumită zonă/regiune.
+        </p>
+    </section>
+    <section id="contact" role="doc-contact">
+        <h3>4.7 Contact Page </h3>
+        <p>
+            Pagina de contact servește ca punct de legătură între utilizatori și echipa
+            administrativă a site-ului, oferind opțiuni multiple de comunicare. Structurată pentru accesibilitate și
+            ușurință în utilizare, pagina include informații esențiale precum adresa de email, numărul de telefon și
+            adresa fizică a companiei, toate listate clar pentru a facilita contactarea rapidă. Mai jos,
+            utilizatorii pot completa un formular detaliat de contact, necesitând introducerea numelui, adresei de
+            email și a unui mesaj, scopul fiind acela de a permite trimisul direct de întrebări sau feedback.
+        </p>
+    </section>
+    <section id="about" role="doc-about">
+        <h3>4.8 About Page </h3>
+        <p>
+            In cadrul paginii About sunt prezente informații despre aplicația web și rolul acesteia. De asemenea,
+            aici se afla si un buton care sa ne redirecționeze către pagina documentației proiectului, pentru
+            utilizatorii care doresc să intre mai în detaliu in diferite aspecte ale temei și implementării
+            aplicației.
+        </p>
+    </section>
+    <section id="help" role="doc-help">
+        <h3>4.9 Help Page </h3>
+        <p>
+            Pagina Help este concepută pentru a asista utilizatorii în raportarea animalelor aflate în
+            pericol. Pagina oferă un ghid detaliat despre situațiile care necesită raportare, informațiile
+            specifice ce trebuie incluse și instrucțiuni clare despre cum să se realizeze raportarea prin
+            intermediul aplicației web. În plus, pagina conține linkuri către alte resurse utile ale site-ului Fepa
+            și subliniază angajamentul aplicației față de bunăstarea animalelor, încurajând implicarea comunității
+            în protecția acestora.
+        </p>
+    </section>
+    <section id="login" role="doc-login">
+        <h3>4.10 Login Page </h3>
+        <p>
+            Pagina de logare poate fi accesată atât de persoanele care au deja un cont pe platformă, cât și de cele
+            care nu au. În funcție de intenția pe care utilizatorul o are, îi sunt puse la dispoziție două
+            formulare. În formularul destinat celor ce dețin deja un cont câmpurile de completat sunt: username și
+            parolă, cu o funcționalitate specială de resetare a parolei în cazul în care aceasta a fost uitată.
+        </p>
+    </section>
+    <section id="signup" role="doc-signup">
+        <h3>4.11 Sign up Page </h3>
+        <p>
+            Pagina de înregistrare prezintă un formular prin care utilizatorul își poate crea un cont pe platforma
+            noastră. Datele necesare pentru înregistrarea pe site-ul nostru web sunt username, adresa de email și
+            parolă (confirmare parolă). Atunci când utilizatorul se înregistrează cu acest cont nou, el acceptă
+            implicit politica de prelucrare a datelor care va fi concepută ulterior.
+        </p>
+    </section>
+    <section id="forget" role="doc-forget">
+        <h3>4.12 Forget Username/Password Page </h3>
+        <p>
+            Această pagină a platformei Fepa este destinată recuperării datelor de autentificare, oferind
+            utilizatorilor posibilitatea de a recupera numele de utilizator sau parola pierdute prin intermediul
+            formularului corespunzător. În secțiunea principală a paginii, utilizatorii pot introduce adresa de
+            email asociată contului lor pentru a primi instrucțiuni despre cum să-și recupereze numele de utilizator
+            sau parola.
+        </p>
+    </section>
+    <section id="admin" role="doc-admin">
+        <h3>4.13 Admin Page </h3>
+        <p>
+            Această pagină reprezintă panoul administratorilor în cadrul platformei Fepa, furnizând
+            instrumente esențiale pentru gestionarea utilizatorilor și a rapoartelor. Aici, administratorii pot
+            vedea utilizatorii înregistrați și pot efectua acțiuni precum eliminarea acestora pe baza unor tabele
+            interactive. De asemenea, sunt disponibile informații despre utilizatorii conectați în prezent și despre
+            rapoartele înregistrate, oferind opțiuni de gestionare a acestora. Este important de menționat că, pe
+            măsură ce platforma evoluează, pot fi adăugate și alte funcționalități pentru a spori eficiența și
+            capacitatea de administrare a site-ului.
+        </p>
+    </section>
+    <section id="statistics" role="doc-statistics">
+        <h3>4.14 Statistics Page </h3>
+        <p>
+            Pagina de statistici are rolul de a oferi utilizatorilor o imagine de ansamblu asupra situației
+            curente a animalelor raportare pe platformă. Aici, utilizatorii pot vizualiza date agregate și
+            prelucrate, precum numărul total de animale raportate, distribuția acestora pe categorii, precum și
+            statistici pe baza tagurilor din patformă.
+            De asemenea aceștia pot exporta statisticile în formatele HTML, CSV și PDF pentru a le putea folosi
+            ulterior.
+        </p>
+    </section>
+    <section id="video" role="doc-video">
+        <h3> Videoclip de prezentare</h3>
+        <p>
+            Următorul videoclip cuprinde o prezentare a platformei noastre, Fepa, și a funcționalităților acesteia.
+        </p>
+        <a href = "https://youtu.be/vxd9A-FcUGE"><p>Link YouTube</p></a>
+    </section>
+
+</section>
+<section id="functional" role="doc-functional">
+    <h2>5. Alte funcționalități</h2>
+    <section id="performance" role="doc-performance">
+        <h3>5.1 Cerințe de performanță </h3>
+        <p>
+            Produsul nostru utilizează o singură bază de date pentru a stoca atât datele utilizatorilor, cât și
+            datele anunțurilor oferind astfel performanță sporită în detrimentul redundanței.
+            De asemenea, API-urile utilizate în scopul interfeței, al vizualizării datelor și al gestionării hărților
+            sunt unele simple
+            pentru a nu încărca inutil sistemul prin apeluri complexe, dar care să nu aducă un plus real de valoare
+            aplicației.
+        </p>
+    </section>
+    <section id="safety" role="doc-safety">
+        <h3>5.2 Cerințe de siguranță </h3>
+        <p>
+            Pentru a crește gradul de siguranță pe platformă anunțurile vor trebui să conțină numele și numărul de
+            telefon al persoanei ce face anunțul pentru a nu da posibilitatea creării de anunțuri fantomă.
+        </p>
+    </section>
+    <section id="security" role="doc-security">
+        <h3>5.3 Cerințe de securitate </h3>
+        <p>
+            Pentru a asigura securitate sporită la crearea contului este obligatorie folosirea unui email, a unei
+            parole complexe, dar și a unui username.
+            Parolele vor fi stocate în mod criptat în baza de date pentru a nu oferi o breșă de securitate în cazul
+            unui atac în urma căruia atacatorul să obțină acces la conturile utilizatorilor.
+        </p>
+    </section>
+    <section id="software" role="doc-software">
+        <h3>5.4 Atribute de calitate</h3>
+        <p>
+            Calitatea platformei noastre stă în ușurința utilizării, deoarece, prin designul ales și prin
+            arhitectura
+            site-ului, am creat un mediu ușor de navigat pentru utilizatorul nou, unde acesta poate să-și
+            îndeplinească scopul de a raporta animale aflate în situații critice.
+            O a doua calitate a platformei este adaptabilitatea la o gamă variată de platforme prin designul creat
+            în așa fel încât, indiferent de rezoluția dispozitivului de pe care este accesat, acesta să își păstreze
+            aspectul și să fie la fel de fluid în utilizare.
+        </p>
+    </section>
+    <section id="business" role="doc-business">
+        <h3>5.5 Reguli de afaceri</h3>
+        <p>
+            În crearea platformei am urmărit construirea unui produs care să țintească către obiectivele propuse în
+            fișa proiectului și care să le îndeplinească într-un mod eficient și complet. De asemenea s-au utilizator
+            doar biblioteci open-source pentru a respecta un standard de calitate.
+        </p>
+    </section>
+</section>
+
+</body>
+
+</html>

@@ -1,0 +1,102 @@
+@use 'vars';
+
+#background {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/background.svg"); /* Assuming you have a background image */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%; /* Change to 'cover' for a full background */
+  width: 100%;
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 600px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: dashed 3px;
+  border-radius: 10%;
+  border-color: vars.$primary-color;
+  align-items: center;
+  background-color: white;
+  font-family: vars.$sans-font;
+  box-shadow: 0 3px 10px vars.$darker-color;
+
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 0;
+    font-family: vars.$cursive-font;
+    color: vars.$darker-color;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 0;
+    font-family: vars.$cursive-font;
+    color: vars.$darker-color;
+    margin-bottom: 20px;
+  }
+}
+
+
+#container__contact-info {
+  margin-bottom: 20px;
+  text-align: center;
+
+  p {
+    margin: 5px 0;
+  }
+}
+
+#container__contact-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  input[type="text"], input[type="email"], textarea, input[type="tel"], input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 25px;
+  }
+
+  textarea {
+    resize: vertical;
+  }
+
+  input[type="submit"] {
+    font-weight: bold;
+    font-size: 25px;
+    width: 30%;
+    height: 50px;
+    background-color: rgb(43, 186, 86);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    margin: 0 auto;
+    margin-bottom: auto;
+  }
+
+  input[type="submit"]:hover {
+    background-color: rgb(166, 66, 66);
+    box-shadow: inset rgba(60, 70, 85, 0.5) 0px 0px 40px 0px,
+      inset rgba(60, 70, 85, 0.5) 0px 0px 40px 0px,
+      inset rgba(0, 0, 0, 1) 0px 0px 36px -24px;
+  }
+}

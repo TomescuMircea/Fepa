@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+main {
+  display: block;
+}
+main h1 {
+  text-align: center;
+  font-size: 50px;
+  font-family: "Handlee", cursive;
+  color: #008080;
+  margin: 20px auto;
+  margin-top: 30px;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: dashed 3px;
+  border-radius: 10%;
+  border-color: #20b2aa;
+  background-color: white;
+  box-shadow: 0 3px 10px #008080;
+  margin: 30px;
+}
+
+#container__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1em;
+  margin: auto;
+  width: 90%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  #container__grid {
+    grid-template-columns: 1fr;
+  }
+}
+.grid__element {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin: 10px;
+  /*max-width: 100%;*/
+}
+.grid__element h3 {
+  color: #20b2aa;
+}
+
+.chart-img {
+  border-radius: 10px;
+  width: 100%;
+}
+
+#split__chart {
+  height: 130px;
+}
+
+#container__download {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__download__download-statistics-button {
+  width: 100px;
+  background-color: #008080;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 15px;
+}
+
+/*# sourceMappingURL=statistics.css.map */

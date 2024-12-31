@@ -1,0 +1,24 @@
+@use 'vars';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  font-family: vars.$cursive-font;
+}
+
+main {
+  display: flex;
+  flex: 1;
+}

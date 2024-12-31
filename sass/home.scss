@@ -1,0 +1,49 @@
+@use 'vars';
+
+body {
+  display: flex;
+}
+
+main {
+  display: flex;
+  flex: 1;
+}
+
+#container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url("../images/background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#container__welcome-first {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+
+  h1 {
+    color: rgb(255, 255, 255);
+    text-shadow: -1px 3px 10px vars.$shadow-color;
+  }
+}
+
+#container__welcome-snd {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  background-color: vars.$primary-color;
+  box-shadow: 0 0 10px 5px vars.$primary-color;
+
+  p {
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+  }
+}
+

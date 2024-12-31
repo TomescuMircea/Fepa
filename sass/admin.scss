@@ -1,0 +1,130 @@
+@use 'vars';
+
+body {
+  display: flex;
+  background-color: #f0f4f8; // Light background for better contrast
+  font-family: vars.$sans-font;
+  color: vars.$darker-color;
+}
+
+#container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  padding: 20px; // Added padding for better spacing
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #fff; // White background for container
+  border-radius: 10px; // Rounded corners for a modern look
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+
+  h1 {
+    font-size: 36px; // Adjusted font size
+    font-weight: bold;
+    color: vars.$darker-color;
+    font-family: vars.$cursive-font;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    margin: 10px 0;
+    font-size: 24px; // Adjusted font size
+    font-weight: bold;
+    color: vars.$darker-color;
+    font-family: vars.$cursive-font;
+  }
+}
+
+#container table {
+  width: 100%;
+  border-collapse: collapse; // Removed border-spacing for cleaner table
+  margin-bottom: 20px;
+}
+
+#container th,
+#container td {
+  border: 1px solid vars.$darker-color; // Reduced border size for cleaner look
+  padding: 10px; // Consistent padding for all cells
+  text-align: center;
+  font-size: 16px; // Adjusted font size
+}
+
+#container th {
+  background-color: vars.$darker-color;
+  color: #fff;
+  font-weight: bold;
+}
+
+#container tr:nth-child(even) {
+  background-color: #f9f9f9; // Alternating row colors for readability
+}
+
+#container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#container li {
+  font-size: 18px; // Adjusted font size
+  margin: 10px 0;
+}
+
+#container button {
+  margin: 5px; // Smaller margins for buttons
+  padding: 10px 20px;
+  font-size: 14px; // Adjusted font size
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; // Smooth transition for hover effect
+}
+
+#container .remove-button {
+  background-color: #e74c3c; // Red for remove buttons
+}
+
+#container .remove-button:hover {
+  background-color: darken(#e74c3c, 10%); // Darker red on hover
+}
+
+#container .close-button {
+  background-color: #f39c12; // Orange for close buttons
+}
+
+#container .close-button:hover {
+  background-color: darken(#f39c12, 10%); // Darker orange on hover
+}
+
+#container .default-button {
+  background-color: vars.$darker-color;
+}
+
+#container .default-button:hover {
+  background-color: darken(vars.$darker-color, 10%); // Darker color on hover
+}
+
+@media screen and (max-width: 800px) {
+  #container button {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  #container td,
+  #container th,
+  #container li {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 28px; // Adjusted font size for mobile
+  }
+
+  h2 {
+    font-size: 20px; // Adjusted font size for mobile
+  }
+}

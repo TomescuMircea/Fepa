@@ -1,0 +1,190 @@
+@use 'vars';
+
+main {
+  display: block;
+
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    font-family: vars.$cursive-font;
+    color: vars.$darker-color;
+    margin: 20px auto;
+    margin-top: 30px;
+  }
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: dashed 3px;
+  border-radius: 10%;
+  border-color: vars.$primary-color;
+  background-color: white;
+  box-shadow: 0 3px 10px vars.$darker-color;
+  margin: 30px auto;
+  width: 80%;
+}
+
+#container__grid {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  column-gap: 3%;
+  row-gap: 1em;
+  margin: auto;
+  width: 90%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  p, li {
+  font-size: 20px;
+  color: black;
+  font-family: vars.$sans-font;
+  text-align: center;
+  }
+
+  li {
+  font-weight: bold;
+  }
+
+  h3,h4 {
+  font-size: 30px;
+  font-weight: bold;
+  color: vars.$darker-color;
+  font-family: vars.$cursive-font;
+  text-align: center;
+  }
+
+  h2 {
+  font-size: 40px;
+  font-weight: bold;
+  color: vars.$darker-color;
+  font-family: vars.$cursive-font;
+  text-align: center;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #container__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+#grid__left-card {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 3;
+}
+
+@media screen and (max-width: 1000px) {
+  #grid__left-card {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+.slides__image-card {
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 10%;
+}
+
+#grid__right-card1 {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+  align-items: center;
+  justify-content: center;
+}
+#grid__right-card2 {
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+}
+#grid__right-card3 {
+  grid-column: 2 / span 1;
+  grid-row: 3 / span 1;
+}
+
+@media screen and (max-width: 1000px) {
+  #grid__right-card1,
+  #grid__right-card2,
+  #grid__right-card3 {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+/* Slideshow container */
+#left-card__slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+@media screen and (max-width: 1000px) {
+  #left-card__slideshow-container {
+    width: 80%;
+  }
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: vars.$darker-color;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.mySlides {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}

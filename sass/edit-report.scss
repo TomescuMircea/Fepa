@@ -1,0 +1,175 @@
+@use 'vars';
+
+#background {
+  display: flex;
+  background-image: url("../images/background.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  width: 100%;
+}
+
+#container {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: auto;
+  justify-content: center;
+  border: dashed 3px;
+  border-radius: 5%;
+  border-color: vars.$primary-color;
+  align-items: center;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px vars.$darker-color;
+  font-family: vars.$sans-font;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: fit-content;
+  align-items: center;
+}
+
+#container__section {
+  h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: vars.$darker-color;
+    font-family: vars.$cursive-font;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: vars.$darker-color;
+    font-family: vars.$darker-color;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  #container__section h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  #container__section h2 {
+    font-size: 20px;
+  }
+}
+
+.form__label {
+  font-size: 35px;
+  font-weight: light;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media screen and (max-width: 970px) {
+  .form__label {
+    font-size: 25px;
+  }
+}
+
+.form__input-name,
+.form__input-location,
+.form__input-phone_number,
+.form__select-animal_type,
+.form__textarea-description {
+  width: 350px;
+  padding: 8px;
+  margin: 10px auto;
+  border: 1px solid vars.$primary-color;
+  border-radius: 5px;
+  font-size: 18px;
+  outline-color: vars.$primary-color;
+  display: block;
+}
+
+@media screen and (max-width: 970px) {
+  .form__input-name,
+  .form__input-location,
+  .form__input-phone_number,
+  .form__select-animal_type,
+  .form__textarea-description {
+    width: 300px;
+  }
+}
+
+.form__submit-button {
+  display: block;
+  margin: 30px auto;
+  padding: 15px 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-color: vars.$primary-color;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form__submit-button:hover {
+  background-color: vars.$darker-color;
+}
+
+.form__upload-image {
+  width: 350px;
+  padding: 8px;
+  margin: 10px auto;
+  display: block;
+}
+
+@media screen and (max-width: 970px) {
+  .form__upload-image {
+    width: 300px;
+  }
+}
+
+.tag-button {
+  background-color: white;
+  border: 1px solid vars.$primary-color;
+  border-radius: 5px;
+  color: vars.$darker-color;
+  cursor: pointer;
+  display: inline-block;
+  margin: 5px;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.tag-button:hover {
+  background-color: vars.$primary-color;
+  color: white;
+}
+
+.tag-button.active {
+  background-color: vars.$primary-color;
+  color: white;
+}
+
+#map {
+  height: 300px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+}
+
+#form__tags {
+  text-align: center;
+}
+
+#tags__container {
+  display: inline-block;
+}
+
+#form__submit-button-container {
+  text-align: center;
+}
